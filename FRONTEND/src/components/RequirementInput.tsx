@@ -6,7 +6,7 @@ interface Props {
 
 const SUGGESTIONS = [
   'I need a phone under ₹30k for gaming and camera',
-  'Laptop under ₹70k for college, mostly office work',
+  'Phone under ₹15k with good camera and battery',
   'Phone under ₹20k with great battery backup',
 ]
 
