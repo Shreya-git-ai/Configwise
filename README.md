@@ -472,7 +472,7 @@ the system answers:
 
 This combination of **constraint satisfaction, personalized scoring, optimization, and What-If analysis** makes the project adaptable to a wide range of real-world decision-making problems.
 
----
+-----
 
 ## 📜 License
 
