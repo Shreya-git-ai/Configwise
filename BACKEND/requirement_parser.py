@@ -1,6 +1,5 @@
 import os
 import json
-from xmlrpc import client
 from groq import Groq
 from dotenv import load_dotenv
 
