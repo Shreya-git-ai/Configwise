@@ -1,0 +1,134 @@
+:root {
+  /* -- palette: soft indigo/lavender system, warmed with coral + mint accents -- */
+  --bg: #F4F2FB;
+  --bg-soft: #EDE9F9;
+  --surface: #FFFFFF;
+  --surface-sunken: #F1EEFA;
+
+  --ink: #241D3D;
+  --ink-soft: #5F5878;
+  --ink-faint: #9A93B3;
+
+  --line: #E3DEF3;
+  --line-strong: #D2CAEF;
+
+  --primary: #6C5DD3;
+  --primary-ink: #2E2559;
+  --primary-tint: #E8E3FB;
+
+  --coral: #E97C56;
+  --coral-tint: #FBE4DA;
+
+  --mint: #3FA787;
+  --mint-tint: #DEF3EB;
+
+  --gold: #C98A2A;
+  --gold-tint: #F7E7C9;
+  --silver: #6E6A8C;
+  --silver-tint: #E9E7F4;
+  --bronze: #B06B3E;
+  --bronze-tint: #F2DFCD;
+
+  --danger: #C24545;
+  --danger-tint: #FAE1E1;
+
+  --font-display: 'Sora', 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', monospace;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+
+  --shadow-card: 0 1px 2px rgba(46, 37, 89, 0.04), 0 10px 24px -12px rgba(46, 37, 89, 0.16);
+  --shadow-pop: 0 20px 48px -18px rgba(46, 37, 89, 0.32);
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(108, 93, 211, 0.10), transparent 40%),
+    radial-gradient(circle at 88% 92%, rgba(233, 124, 86, 0.08), transparent 45%);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+p { margin: 0; }
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+/* focus ring, accessible */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+/* -- signature element: the "spec ticket" -- perforated divider between the
+   rank header and the spec body of a device card, echoing a hardware spec sheet -- */
+.ticket-perforation {
+  position: relative;
+  height: 1px;
+  background: repeating-linear-gradient(
+    to right,
+    var(--line-strong) 0,
+    var(--line-strong) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  margin: 0 -22px;
+}
+
+.ticket-notch {
+  position: absolute;
+  top: -9px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid var(--line);
+}
+
+.ticket-notch.left { left: -10px; }
+.ticket-notch.right { right: -10px; }
+
+::selection {
+  background: var(--primary-tint);
+  color: var(--primary-ink);
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
